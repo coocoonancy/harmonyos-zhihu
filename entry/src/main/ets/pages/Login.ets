@@ -78,9 +78,6 @@ struct Login {
           })
       }.padding({ left: 32, right: 32 })
 
-      Image($r('app.media.arrow_right'))
-        .width(10)
-        .height(10)
     }
     .width('100%')
     .height('100%')
