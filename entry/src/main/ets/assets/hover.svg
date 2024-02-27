@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_fankui_hover</title>
+    <g id="icon_fankui_hover" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="编组-3" transform="translate(3.500000, 2.000000)" stroke="#FFFFFF">
+            <path d="M13,4 L13,15 C13,15.5522847 12.5522847,16 12,16 L1,16 C0.44771525,16 6.76353751e-17,15.5522847 0,15 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L12,0 C12.5522847,-1.01453063e-16 13,0.44771525 13,1 L13,4 L13,4 Z" id="路径"></path>
+            <line x1="4.5" y1="8.5" x2="9.5" y2="3.5" id="路径-11"></line>
+            <line x1="3" y1="12" x2="10" y2="12" id="路径-15备份"></line>
+        </g>
+    </g>
+</svg>
