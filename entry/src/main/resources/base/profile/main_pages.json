@@ -4,6 +4,7 @@
     "pages/StackCase",
     "pages/Resources/StyleCase",
     "pages/ExtendCase",
-    "pages/StateStyleCase"
+    "pages/StateStyleCase",
+    "pages/IfElseCase"
   ]
 }
