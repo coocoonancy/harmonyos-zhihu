@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/StackCase"
+    "pages/StackCase",
+    "pages/Resources/StyleCase"
   ]
 }
