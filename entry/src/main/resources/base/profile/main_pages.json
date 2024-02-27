@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/StackCase",
     "pages/Resources/StyleCase",
-    "pages/ExtendCase"
+    "pages/ExtendCase",
+    "pages/StateStyleCase"
   ]
 }
