@@ -6,6 +6,8 @@
     "pages/ExtendCase",
     "pages/StateStyleCase",
     "pages/IfElseCase",
-    "pages/LazyCase/LazyCase"
+    "pages/LazyCase/LazyCase",
+    "pages/LazyCase/ForEachCase",
+    "pages/LazyCase/GoodsCase"
   ]
 }
