@@ -8,6 +8,9 @@
     "pages/IfElseCase",
     "pages/LazyCase/LazyCase",
     "pages/LazyCase/ForEachCase",
-    "pages/LazyCase/GoodsCase"
+    "pages/LazyCase/GoodsCase",
+    "pages/LazyCase/ForEachGrid",
+    "pages/LazyCase/SegementCase",
+    "pages/ZhiHu/ZhiHuCase"
   ]
 }
