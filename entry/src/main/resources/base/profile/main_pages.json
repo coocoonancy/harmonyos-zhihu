@@ -5,6 +5,7 @@
     "pages/Resources/StyleCase",
     "pages/ExtendCase",
     "pages/StateStyleCase",
-    "pages/IfElseCase"
+    "pages/IfElseCase",
+    "pages/LazyCase/LazyCase"
   ]
 }
