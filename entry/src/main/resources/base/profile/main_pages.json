@@ -11,6 +11,8 @@
     "pages/LazyCase/GoodsCase",
     "pages/LazyCase/ForEachGrid",
     "pages/LazyCase/SegementCase",
-    "pages/ZhiHu/ZhiHuCase"
+    "pages/ZhiHu/ZhiHuCase",
+    "pages/WaterFlow/WaterFlowCase",
+    "pages/SlotCase/SlotCase"
   ]
 }
