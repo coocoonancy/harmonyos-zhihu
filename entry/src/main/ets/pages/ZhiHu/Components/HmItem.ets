@@ -3,16 +3,7 @@ import { ReplyItem, ReplyItemModel } from '../models'
 
 @Component
 struct HmItem {
-  item: ReplyItemModel = new ReplyItemModel({
-    id: 999,
-    author: '周杰伦',
-    avatar: 'https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/homeNew/College.svg',
-    likeNum: 10,
-    likeFlag: false,
-    time: '03-02',
-    area: '北京',
-    content: '人到了一定的年龄新陈代谢就慢了，吃了胖不吃瘦了皱纹就多，要靠锻炼 '
-  })
+  item: ReplyItemModel = new ReplyItemModel({} as ReplyItem)
   changeLike: () => void = () => {
   }
 

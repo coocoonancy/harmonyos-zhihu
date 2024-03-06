@@ -1,6 +1,8 @@
 @Component
 struct HmReplyInput {
   @State content: string = ''
+  publishComment: (content: string) => void = () => {
+  }
 
   build() {
     Row({ space: 16 }) {
@@ -11,6 +13,12 @@ struct HmReplyInput {
           this.content = value;
         })
       Button('发布')
+        .onClick(() => {
+          if (this.content) {
+            this.publishComment(this.content)
+            this.content = ''
+          }
+        })
     }
     .width('100%')
     .padding(16)

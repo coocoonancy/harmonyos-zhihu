@@ -6,8 +6,34 @@ import { ReplyItemModel } from './models'
 @Component
 struct ZhiHuCase {
   title: string = '评论回复'
+  scroller: Scroller = new Scroller()
+  @State showTop: boolean = true
+  @State
+  currentComment: ReplyItemModel = new ReplyItemModel({
+    id: 999,
+    author: '周杰伦',
+    avatar: 'https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/homeNew/College.svg',
+    likeNum: 10,
+    likeFlag: false,
+    time: '03-02',
+    area: '北京',
+    content: '人到了一定的年龄新陈代谢就慢了，吃了胖不吃瘦了皱纹就多，要靠锻炼 '
+  })
+  // 发布
+  publishComment(content: string) {
+    this.commentList.unshift(new ReplyItemModel({
+      id: Math.random(),
+      author: '周杰伦',
+      avatar: 'https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/homeNew/College.svg',
+      likeNum: 10,
+      likeFlag: false,
+      time: '03-02',
+      area: '北京',
+      content
+    }))
+  }
   // 点赞
-  changeLike(item: ReplyItemModel) {
+  changeLike(item: ReplyItemModel, type?: 'top' | 'bottom') {
     if (item.likeFlag) {
       // 点过赞
       item.likeNum--
@@ -16,10 +42,14 @@ struct ZhiHuCase {
       item.likeNum++
     }
     item.likeFlag = !item.likeFlag
-    // 只能监测到第一层
-    const index = this.commentList.findIndex(obj => obj.id === item.id)
-    //this.commentList[index] = item // 这么写为什么不行 // 引用类型 基础类型
-    this.commentList[index] = new ReplyItemModel(item)
+    if (type !== 'top') {
+      // 只能监测到第一层
+      const index = this.commentList.findIndex(obj => obj.id === item.id)
+      //this.commentList[index] = item // 这么写为什么不行 // 引用类型 基础类型
+      this.commentList[index] = new ReplyItemModel(item)
+    } else {
+      this.currentComment = new ReplyItemModel(item)
+    }
   }
 
   @State commentList: ReplyItemModel[] = [
@@ -99,9 +129,20 @@ struct ZhiHuCase {
 
     Column() {
       HmNav({ title: this.title })
-      HmItem()
+      if (this.showTop) {
+        HmItem({
+          item: this.currentComment,
+          changeLike: () => {
+            this.changeLike(this.currentComment, "top")
+            this.showTop = false
+            setTimeout(() => {
+              this.showTop = true
+            }, 10)
+          }
+        })
+      }
       Divider().strokeWidth(6)
-      List() {
+      List({ scroller: this.scroller }) {
         ForEach(this.commentList, (item: ReplyItemModel) => {
           ListItem() {
             HmItem({ item, changeLike: () => {
@@ -112,7 +153,11 @@ struct ZhiHuCase {
       }
       .layoutWeight(1)
 
-      HmReplyInput()
+      HmReplyInput({ publishComment: (content: string) => {
+        this.publishComment(content)
+        // 控制滚动条
+        this.scroller.scrollEdge(Edge.Top)
+      } })
     }
   }
 }
