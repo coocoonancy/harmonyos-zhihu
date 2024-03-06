@@ -13,6 +13,8 @@
     "pages/LazyCase/SegementCase",
     "pages/ZhiHu/ZhiHuCase",
     "pages/WaterFlow/WaterFlowCase",
-    "pages/SlotCase/SlotCase"
+    "pages/SlotCase/SlotCase",
+    "pages/BuildCase/BuildCase",
+    "pages/BuildCase/GlobalBuilderCase/GlobalBuilderCase"
   ]
 }
