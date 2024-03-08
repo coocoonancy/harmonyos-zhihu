@@ -15,6 +15,10 @@
     "pages/WaterFlow/WaterFlowCase",
     "pages/SlotCase/SlotCase",
     "pages/BuildCase/BuildCase",
-    "pages/BuildCase/GlobalBuilderCase/GlobalBuilderCase"
+    "pages/BuildCase/GlobalBuilderCase/GlobalBuilderCase",
+    "pages/TrailingClosures/TrailingClosures",
+    "pages/MVVM/PropCase",
+    "pages/MVVM/PropMVCase",
+    "pages/SlotCase/HmDialog"
   ]
 }
