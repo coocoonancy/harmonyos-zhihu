@@ -1,5 +1,7 @@
 import { GoodsItem } from '../LazyCase/models'
 import { PhotoAlbum } from './components/PhotoAlbum'
+import { PreviewDialog } from './components/PreviewDialog'
+import { selectedPhotosModel } from './models'
 
 @Entry
 @Component
@@ -78,9 +80,39 @@ struct PropMVCase {
       "goods_count": 1,
     }
   ]
+  @State selectedPhotos: selectedPhotosModel[] = []
+  @State selectedImg: ResourceStr = ''
+  @State activeIndex: number = 0
+  preview: CustomDialogController = new CustomDialogController({
+    builder: PreviewDialog({
+      urls: this.selectedPhotos.map(item => item.goods_img),
+      activeIndex: this.activeIndex
+    }),
+    customStyle: true
+  })
 
   toggleShow() {
     this.showAlbum = !this.showAlbum;
+  }
+
+  @Builder getSelectedImages() {
+    Grid() {
+      ForEach(this.selectedPhotos, (item: GoodsItem, index: number) => {
+        GridItem() {
+          Image(item.goods_img)
+            .aspectRatio(1)
+            .borderRadius(4)
+            .onClick(() => {
+              this.selectedImg = item.goods_img;
+              this.activeIndex = index;
+              this.preview.open();
+            })
+        }
+      })
+    }
+    .columnsTemplate("1fr 1fr")
+    .columnsGap(2)
+    .rowsGap(2)
   }
 
   build() {
@@ -95,12 +127,18 @@ struct PropMVCase {
       .width('100%')
       .justifyContent(FlexAlign.Center)
 
+      this.getSelectedImages()
+
       if (this.showAlbum) {
         PhotoAlbum({
           maxCounts: this.maxCounts,
           goods: this.goods,
           toggleShow: () => {
             this.toggleShow()
+          },
+          finish: (selectedPhotos: selectedPhotosModel[]) => {
+            this.selectedPhotos.push(...selectedPhotos)
+            this.showAlbum = false;
           }
         })
       }

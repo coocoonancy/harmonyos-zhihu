@@ -8,6 +8,8 @@ struct PhotoAlbum {
   @State selectedPhotos: selectedPhotosModel[] = []
   toggleShow: () => void = () => {
   }
+  finish: (selectPhotos: selectedPhotosModel[]) => void = () => {
+  }
 
   selectImage(item) {
     const index = this.selectedPhotos.findIndex(e => e.id === item.id)
@@ -34,6 +36,7 @@ struct PhotoAlbum {
             Stack({ alignContent: Alignment.TopEnd }) {
               Image(item.goods_img)
                 .aspectRatio(1)
+
 
               if (this.getSelected(item)) {
                 Text('☑️')
@@ -65,6 +68,9 @@ struct PhotoAlbum {
           .backgroundColor(Color.Gray)
         Text(this.selectedPhotos.length + ' / ' + this.maxCounts)
         Button('完成')
+          .onClick(() => {
+            this.finish(this.selectedPhotos)
+          })
       }
       .backgroundColor(Color.White)
       .justifyContent(FlexAlign.SpaceBetween)

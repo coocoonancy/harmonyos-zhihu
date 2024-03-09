@@ -19,6 +19,7 @@
     "pages/TrailingClosures/TrailingClosures",
     "pages/MVVM/PropCase",
     "pages/MVVM/PropMVCase",
-    "pages/SlotCase/HmDialog"
+    "pages/SlotCase/HmDialog",
+    "pages/MVVM/LinkCase"
   ]
 }
