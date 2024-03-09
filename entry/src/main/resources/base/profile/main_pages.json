@@ -20,6 +20,7 @@
     "pages/MVVM/PropCase",
     "pages/MVVM/PropMVCase",
     "pages/SlotCase/HmDialog",
-    "pages/MVVM/LinkCase"
+    "pages/MVVM/LinkCase",
+    "pages/MVVM/LinkCart"
   ]
 }
