@@ -21,6 +21,15 @@
     "pages/MVVM/PropMVCase",
     "pages/SlotCase/HmDialog",
     "pages/MVVM/LinkCase",
-    "pages/MVVM/LinkCart"
+    "pages/MVVM/LinkCart",
+    "pages/ProvideCase/ProvideCase",
+    "pages/ProvideCase/ProvideLogin",
+    "pages/ProvideCase/ProvideConsume",
+    "pages/ProvideCase/WatchCase",
+    "pages/ProvideCase/WatchQuestion",
+    "pages/ObjectLinkCase/ObjectLinkCase",
+    "pages/LocalStorageCase/LocalStorageCase",
+    "pages/LocalStorageCase/ShareA",
+    "pages/LocalStorageCase/ShareB"
   ]
 }
