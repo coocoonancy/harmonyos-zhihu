@@ -32,6 +32,10 @@
     "pages/LocalStorageCase/ShareA",
     "pages/LocalStorageCase/ShareB",
     "pages/StorageCase/AppStorageCase",
-    "pages/StorageCase/AppMain"
+    "pages/StorageCase/AppMain",
+    "pages/StorageCase/PersistenceCase",
+    "pages/StorageCase/LoginStorageCase",
+    "pages/StorageCase/HomeStorageCase",
+    "pages/HttpCase/HttpCase"
   ]
 }
