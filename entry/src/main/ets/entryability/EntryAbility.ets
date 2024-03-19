@@ -17,7 +17,7 @@ export default class EntryAbility extends UIAbility {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
     const isToken = await TokenManager.getToken(this.context)
 
-    windowStage.loadContent(isToken ? 'pages/StorageCase/HomeStorageCase' : 'pages/StorageCase/LoginStorageCase', (err, data) => {
+    windowStage.loadContent(isToken ? 'pages/MeiTuan/MTIndex' : 'pages/StorageCase/LoginStorageCase', (err, data) => {
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
         return;

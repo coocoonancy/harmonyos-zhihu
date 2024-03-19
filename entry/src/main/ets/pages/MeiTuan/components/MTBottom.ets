@@ -1,5 +1,8 @@
 @Component
 struct MTBottom {
+  @Consume
+  cartVisible: boolean
+
   build() {
     Row() {
       Row() {
@@ -16,6 +19,9 @@ struct MTBottom {
         .width(50)
         .height(50)
         .margin({ left: 25, right: 10 })
+        .onClick(() => {
+          this.cartVisible = !this.cartVisible
+        })
 
         Column() {
           Text() {
