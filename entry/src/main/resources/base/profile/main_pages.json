@@ -36,6 +36,9 @@
     "pages/StorageCase/PersistenceCase",
     "pages/StorageCase/LoginStorageCase",
     "pages/StorageCase/HomeStorageCase",
-    "pages/HttpCase/HttpCase"
+    "pages/HttpCase/HttpCase",
+    "pages/HttpCase/TaskCase",
+    "pages/HttpCase/WorkCase",
+    "pages/MeiTuan/MTIndex"
   ]
 }
