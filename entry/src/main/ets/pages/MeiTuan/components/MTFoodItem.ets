@@ -47,9 +47,7 @@ struct MTFoodItem {
               .fontWeight(FontWeight.Bold)
           }
 
-          Row() {
-            MTAddCart()
-          }
+          MTAddCart({ item: this.item })
         }
         .justifyContent(FlexAlign.SpaceBetween)
         .width('100%')
