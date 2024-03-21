@@ -3,14 +3,14 @@ import { DouYinCommentModel } from '../models'
 @Component
 struct DouYinCase {
   @ObjectLink
-  item: DouYinCommentModel
+  comment: DouYinCommentModel
 
   build() {
     Row() {
-      ForEach(Object.keys(this.item), (key: string) => {
-        Text(this.item[key].toString())
+      ForEach(Object.keys(this.comment), (key: string) => {
+        Text(this.comment[key].toString())
           .onClick(() => {
-            this.item[key] = key;
+            this.comment[key] = key;
           })
       })
     }

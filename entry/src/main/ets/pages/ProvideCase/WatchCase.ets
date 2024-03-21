@@ -5,11 +5,16 @@ import { WatchChild } from './components/WatchChild'
 @Component
 struct WatchCase {
   @State
+  @Watch('updateNumber')
+  num: number = 0
+  @State
   @Watch('updateMessage')
   message: string = 'Hello World'
-
   updateMessage() {
     promptAction.showToast({ message: this.message })
+  }
+  updateNumber() {
+    promptAction.showToast({ message: '子组件变化了' })
   }
 
   build() {
@@ -22,7 +27,7 @@ struct WatchCase {
           .onClick(() => {
             this.message += Math.random().toFixed(2);
           })
-        WatchChild({ message: this.message })
+        WatchChild({ message: this.message, num: $num })
       }
       .width('100%')
     }

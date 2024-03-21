@@ -1,10 +1,12 @@
 import { FoodItemModel } from '../models'
+import { CartStore } from '../utils'
 
 @Component
 struct MTAddCart {
   @Consume
   userCart: FoodItemModel[]
   item: FoodItemModel
+  fid: number
 
   getCount() {
     return this.userCart.find(item => item.id === this.item.id)?.count || 0
@@ -24,8 +26,11 @@ struct MTAddCart {
       .border({ width: 0.5, color: $r('app.color.font_main_color') })
       .backgroundColor($r('app.color.white'))
       .visibility(this.getCount() ? Visibility.Visible : Visibility.Hidden)
+      .onClick(() => {
+        CartStore.addCutCart('cut', this.item)
+      })
 
-      Text('0').fontSize(14)
+      Text(this.getCount().toString()).fontSize(14)
         .visibility(this.getCount() ? Visibility.Visible : Visibility.Hidden)
       Row() {
         Image($r('app.media.ic_public_add_filled'))
@@ -38,6 +43,10 @@ struct MTAddCart {
       .borderRadius(4)
       .border({ width: 0.5, color: $r('app.color.font_main_color') })
       .backgroundColor($r('app.color.main_color'))
+      .onClick(() => {
+        CartStore.addCutCart('cut', this.item)
+      })
+
     }
   }
 }

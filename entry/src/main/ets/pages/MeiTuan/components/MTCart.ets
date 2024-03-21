@@ -29,7 +29,7 @@ struct MTCart {
             ListItem() {
               MTCartItem({ item })
             }
-          })
+          }, (item: FoodItemModel) => item.id.toString())
         }
         .divider({
           strokeWidth: 0.5,

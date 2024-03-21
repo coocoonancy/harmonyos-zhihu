@@ -33,6 +33,19 @@ struct HmDialog {
     .padding(16)
 
   }
+  @Builder
+  footerSlotFn() {
+    Row() {
+      Text('内容')
+        .fontSize(24)
+    }
+    .width('100%')
+    .height(60)
+    .backgroundColor(Color.Yellow)
+    .justifyContent(FlexAlign.Center)
+    .padding(16)
+
+  }
 
   build() {
     Column() {
@@ -42,6 +55,9 @@ struct HmDialog {
         },
         bodySlotFn: () => {
           this.bodySlotFn()
+        },
+        footerSlotFn: () => {
+          this.footerSlotFn()
         }
       })
     }

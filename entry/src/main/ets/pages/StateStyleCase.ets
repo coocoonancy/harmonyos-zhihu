@@ -6,7 +6,7 @@ struct StateStyleCase {
   build() {
     Column({ space: 20 }) {
       Row() {
-        Search() {}
+        Search({ value: 'Search' })
         .stateStyles({
           normal: {
             .border({ color: Color.Transparent })

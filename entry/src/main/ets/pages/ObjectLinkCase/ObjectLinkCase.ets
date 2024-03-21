@@ -19,9 +19,9 @@ struct ObjectLinkCase {
 
   build() {
     List() {
-      ForEach(this.comments, (item: DouYinCommentModel) => {
+      ForEach(this.comments, (comment: DouYinCommentModel) => {
         ListItem() {
-          DouYinCase({ item: item })
+          DouYinCase({ comment })
         }
       })
     }

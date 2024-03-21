@@ -81,8 +81,8 @@ struct PropMVCase {
     }
   ]
   @State selectedPhotos: selectedPhotosModel[] = []
-  @State selectedImg: ResourceStr = ''
   @State activeIndex: number = 0
+  selectedImg: ResourceStr = ''
   preview: CustomDialogController = new CustomDialogController({
     builder: PreviewDialog({
       urls: this.selectedPhotos.map(item => item.goods_img),

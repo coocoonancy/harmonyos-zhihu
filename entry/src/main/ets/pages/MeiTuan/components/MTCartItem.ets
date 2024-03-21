@@ -27,7 +27,7 @@ struct MTCartItem {
               .fontColor($r("app.color.font_main_color"))
               .fontWeight(FontWeight.Bold)
           }
-          MTAddCart({ item: this.item })
+          MTAddCart({ item: this.item, fid: this.item.id })
         }
         .justifyContent(FlexAlign.SpaceBetween)
         .width('100%')

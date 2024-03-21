@@ -16,12 +16,17 @@ export default class EntryAbility extends UIAbility {
     // Main window is created, set main page for this ability
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
     const isToken = await TokenManager.getToken(this.context)
+    windowStage.getMainWindowSync()
+      .setWindowLayoutFullScreen(true)
 
     windowStage.loadContent(isToken ? 'pages/MeiTuan/MTIndex' : 'pages/StorageCase/LoginStorageCase', (err, data) => {
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
         return;
       }
+      windowStage.getMainWindowSync().setWindowBackgroundColor('#ffffff')
+      // windowStage.getMainWindowSync().getUIContext()
+      //   .setKeyboardAvoidMode(KeyboardAvoidMode.RESIZE)
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
     });
   }

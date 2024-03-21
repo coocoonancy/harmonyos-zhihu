@@ -39,6 +39,8 @@
     "pages/HttpCase/HttpCase",
     "pages/HttpCase/TaskCase",
     "pages/HttpCase/WorkCase",
-    "pages/MeiTuan/MTIndex"
+    "pages/MeiTuan/MTIndex",
+    "pages/SafeAreaCase/SafeAreaCase",
+    "pages/SafeAreaCase/NavigationCase"
   ]
 }
