@@ -41,6 +41,9 @@
     "pages/HttpCase/WorkCase",
     "pages/MeiTuan/MTIndex",
     "pages/SafeAreaCase/SafeAreaCase",
-    "pages/SafeAreaCase/NavigationCase"
+    "pages/SafeAreaCase/NavigationCase",
+    "pages/NavigationCase/NavigationCase2",
+    "pages/NavigationCase/RouterCase",
+    "pages/NavigationCase/RouterCase1"
   ]
 }
