@@ -18,8 +18,8 @@ export default class EntryAbility extends UIAbility {
     const isToken = await TokenManager.getToken(this.context)
     // windowStage.getMainWindowSync()
     //   .setWindowLayoutFullScreen(true)
-    const routePage = isToken ? 'pages/MeiTuan/MTIndex' : 'pages/StorageCase/LoginStorageCase'
-
+    // const routePage = isToken ? 'pages/MeiTuan/MTIndex' : 'pages/StorageCase/LoginStorageCase'
+    const routePage = 'pages/NavigationCase/ModuleRouterCase'
     windowStage.loadContent(routePage, (err, data) => {
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');

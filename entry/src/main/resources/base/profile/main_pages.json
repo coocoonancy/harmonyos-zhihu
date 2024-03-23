@@ -44,6 +44,8 @@
     "pages/SafeAreaCase/NavigationCase",
     "pages/NavigationCase/NavigationCase2",
     "pages/NavigationCase/RouterCase",
-    "pages/NavigationCase/RouterCase1"
+    "pages/NavigationCase/RouterCase1",
+    "pages/NavigationCase/ModuleRouterCase",
+    "pages/NavigationCase/LifeCycleCase"
   ]
 }

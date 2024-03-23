@@ -14,6 +14,11 @@ struct RouterCase {
     promptAction.showToast({ message: 'onPageShow' + router.getLength() + JSON.stringify(router.getParams()) })
   }
 
+  onBackPress() {
+    console.log('onBackPress')
+    return true
+  }
+
   build() {
     Column({ space: 20 }) {
       Button('push').onClick(() => {
@@ -37,6 +42,11 @@ struct RouterCase {
           url: 'pages/NavigationCase/RouterCase1',
           params: { name: 'RouterCase' }
         }, router.RouterMode.Single)
+      })
+      Button('push').onClick(() => {
+        router.pushUrl({
+          url: 'pages/NavigationCase/LifeCycleCase'
+        })
       })
     }
     .height('100%')
