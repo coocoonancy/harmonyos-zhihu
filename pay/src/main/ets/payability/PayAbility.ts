@@ -1,11 +1,15 @@
 import UIAbility from '@ohos.app.ability.UIAbility';
 import hilog from '@ohos.hilog';
 import window from '@ohos.window';
-import { TokenManager } from '../utils';
 
-export default class EntryAbility extends UIAbility {
+export default class PayAbility extends UIAbility {
   onCreate(want, launchParam) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    AppStorage.SetOrCreate('order', want.parameters!['order'])
+  }
+
+  onNewWant(want, launchParam) {
+    AppStorage.Set('order', want.parameters!['order'])
   }
 
   onDestroy() {
@@ -15,19 +19,12 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage) {
     // Main window is created, set main page for this ability
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    // const isToken = await TokenManager.getToken(this.context)
-    // windowStage.getMainWindowSync()
-    //   .setWindowLayoutFullScreen(true)
-    // const routePage = isToken ? 'pages/MeiTuan/MTIndex' : 'pages/StorageCase/LoginStorageCase'
-    const routePage = 'pages/NavigationCase/PayNext'
-    windowStage.loadContent(routePage, (err, data) => {
+
+    windowStage.loadContent('pages/Navigation/PayCase', (err, data) => {
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
         return;
       }
-      // windowStage.getMainWindowSync().setWindowBackgroundColor('#ffffff')
-      // windowStage.getMainWindowSync().getUIContext()
-      //   .setKeyboardAvoidMode(KeyboardAvoidMode.RESIZE)
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
     });
   }

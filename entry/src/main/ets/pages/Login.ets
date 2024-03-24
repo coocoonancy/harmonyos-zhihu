@@ -74,7 +74,7 @@ struct Login {
           .layoutWeight(1)
           .onClick(() => {
             AppStorage.SetOrCreate(USER_TOKEN, '')
-            router.pushUrl({ url: '' })
+            router.pushUrl({ url: 'pages/Index' })
           })
       }.padding({ left: 32, right: 32 })
 

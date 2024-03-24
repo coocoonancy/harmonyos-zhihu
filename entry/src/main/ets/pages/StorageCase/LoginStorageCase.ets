@@ -23,7 +23,8 @@ struct LoginStorageCase {
           .onClick(async () => {
             await TokenManager.setToken('123456')
             AppStorage.SetOrCreate<string>('token', '123456')
-            router.pushUrl({ url: 'pages/StorageCase/HomeStorageCase' })
+            router.pushUrl({ url: 'pages/NavigationCase/PayNext' })
+            // router.pushUrl({ url: 'pages/StorageCase/HomeStorageCase' })
           })
       }
       .width('100%')

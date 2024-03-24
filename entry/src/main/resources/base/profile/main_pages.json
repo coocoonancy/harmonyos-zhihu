@@ -46,6 +46,8 @@
     "pages/NavigationCase/RouterCase",
     "pages/NavigationCase/RouterCase1",
     "pages/NavigationCase/ModuleRouterCase",
-    "pages/NavigationCase/LifeCycleCase"
+    "pages/NavigationCase/LifeCycleCase",
+    "pages/NavigationCase/PayCase",
+    "pages/NavigationCase/PayNext"
   ]
 }

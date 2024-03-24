@@ -1,0 +1,27 @@
+{
+  "module": {
+    "name": "pay",
+    "type": "feature",
+    "description": "$string:module_desc",
+    "mainElement": "PayAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "PayAbility",
+        "srcEntry": "./ets/payability/PayAbility.ts",
+        "description": "$string:PayAbility_desc",
+        "icon": "$media:icon",
+        "label": "$string:PayAbility_label",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true
+      }
+    ]
+  }
+}
