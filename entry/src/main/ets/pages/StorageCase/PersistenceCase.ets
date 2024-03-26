@@ -1,7 +1,7 @@
 import { testObj, testObjModel } from './models'
 
 PersistentStorage.PersistProp('name', '张三')
-// PersistentStorage.PersistProp('test', '')
+PersistentStorage.PersistProp('test', '')
 
 @Entry
 @Component
@@ -9,7 +9,7 @@ struct PersistenceCase {
   @StorageLink('name')
   username: string = '李四'
   @StorageProp('test')
-  usertest: testObjModel = new testObjModel({ num: 10 })
+  usertest: string = JSON.stringify(new testObjModel({ num: 10 }))
 
   build() {
     Row() {
@@ -21,7 +21,7 @@ struct PersistenceCase {
         Text(this.username)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
-        Text(this.usertest?.num?.toString())
+        Text(this.usertest ? (JSON.parse(this.usertest) as testObjModel)?.num?.toString() : '')
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
         Button('写入磁盘')

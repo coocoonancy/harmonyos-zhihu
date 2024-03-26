@@ -6,8 +6,8 @@ struct TaskCase {
   @State message: string = 'Hello World'
 
   async beginTask() {
-    taskpool.execute(task1)
-    taskpool.execute(task2)
+    // taskpool.execute(task1)
+    // taskpool.execute(task2)
   }
 
   build() {
@@ -27,16 +27,16 @@ struct TaskCase {
   }
 }
 
-@Concurrent
-function task1() {
-  for (let i = 0; i < 10; i++) {
-    console.log('任务1', i)
-  }
-}
-
-@Concurrent
-function task2() {
-  for (let i = 10; i > 0; i--) {
-    console.log('任务2', i)
-  }
-}
+// @Concurrent
+// function task1() {
+//   for (let i = 0; i < 10; i++) {
+//     console.log('任务1', i)
+//   }
+// }
+//
+// @Concurrent
+// function task2() {
+//   for (let i = 10; i > 0; i--) {
+//     console.log('任务2', i)
+//   }
+// }

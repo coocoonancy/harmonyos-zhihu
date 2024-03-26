@@ -3,9 +3,10 @@ interface CarLocal {
   color: Color
   price: number
 }
+
 export class CarLocalModel implements CarLocal {
   brand: string = ''
-  color: Color = new ColorModel({} as Color)
+  color: Color = Color.White
   price: number = 0
 
   constructor(model: CarLocal) {

@@ -1,4 +1,4 @@
-import { Car } from '../../entryability/EntryAbility'
+import { CarLocalModel } from '../../models'
 
 const carLocal = LocalStorage.GetShared()
 
@@ -6,9 +6,9 @@ const carLocal = LocalStorage.GetShared()
 @Component
 struct CarLocalStorageB {
   @LocalStorageProp('car')
-  myCar: Car = new Car()
+  myCar: CarLocalModel = new CarLocalModel({ brand: '', color: Color.White, price: 0 })
   @LocalStorageLink('car')
-  yourCar: Car = new Car()
+  yourCar: CarLocalModel = new CarLocalModel({ brand: '', color: Color.White, price: 0 })
 
   build() {
     Row() {
@@ -16,9 +16,10 @@ struct CarLocalStorageB {
         Text(this.myCar.brand)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
-        Text(this.myCar.color)
+        Text(this.myCar.price.toString())
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
+          .fontColor(this.myCar.color)
       }
       .width('100%')
 
@@ -26,11 +27,12 @@ struct CarLocalStorageB {
         Text(this.yourCar.brand)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
-        Text(this.yourCar.color)
+        Text(this.yourCar.price.toString())
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
+          .fontColor(this.yourCar.color)
           .onClick(() => {
-            this.yourCar.color = '珍珠白'
+            this.yourCar.color = Color.Black
           })
       }
       .width('100%')

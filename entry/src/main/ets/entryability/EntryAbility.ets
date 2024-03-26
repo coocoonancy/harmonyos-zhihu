@@ -1,8 +1,7 @@
 import UIAbility from '@ohos.app.ability.UIAbility';
 import hilog from '@ohos.hilog';
 import window from '@ohos.window';
-import { TokenManager } from '../utils';
-
+// import { TokenManager } from '../utils';
 export default class EntryAbility extends UIAbility {
   onCreate(want, launchParam) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
@@ -19,7 +18,7 @@ export default class EntryAbility extends UIAbility {
     // windowStage.getMainWindowSync()
     //   .setWindowLayoutFullScreen(true)
     // const routePage = isToken ? 'pages/MeiTuan/MTIndex' : 'pages/StorageCase/LoginStorageCase'
-    const routePage = 'pages/NavigationCase/PayNext'
+    const routePage = 'pages/Index'
     windowStage.loadContent(routePage, (err, data) => {
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
