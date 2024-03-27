@@ -47,6 +47,13 @@
     "pages/NavigationCase/ModuleRouterCase",
     "pages/NavigationCase/LifeCycleCase",
     "pages/NavigationCase/PayCase",
-    "pages/NavigationCase/PayNext"
+    "pages/NavigationCase/PayNext",
+    "pages/LoginCase",
+    "pages/AnimationCase/ImageAnimatorCase",
+    "pages/AnimationCase/IfElseAnimation",
+    "pages/AnimationCase/ModalAnimation",
+    "pages/AnimationCase/SharedAnimation",
+    "pages/AnimationCase/SharedTarget",
+    "pages/AnimationCase/TransitionAnimation"
   ]
 }
