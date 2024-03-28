@@ -54,6 +54,10 @@
     "pages/AnimationCase/ModalAnimation",
     "pages/AnimationCase/SharedAnimation",
     "pages/AnimationCase/SharedTarget",
-    "pages/AnimationCase/TransitionAnimation"
+    "pages/AnimationCase/TransitionAnimation",
+    "pages/HybridCase/HybridCase",
+    "pages/HybridCase/WebCase",
+    "pages/HybridCase/VideoCase",
+    "pages/HybridCase/DouYin"
   ]
 }
